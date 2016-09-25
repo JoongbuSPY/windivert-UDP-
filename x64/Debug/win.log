@@ -1,6 +1,0 @@
-﻿D:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (windivert.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-d:\users\good\documents\visual studio 2015\projects\win\win\main.cpp(62): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\users\good\documents\visual studio 2015\projects\win\win\main.cpp(73): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  win.vcxproj -> D:\Users\Good\documents\visual studio 2015\Projects\win\x64\Debug\win.exe
-  win.vcxproj -> D:\Users\Good\documents\visual studio 2015\Projects\win\x64\Debug\win.pdb (Full PDB)

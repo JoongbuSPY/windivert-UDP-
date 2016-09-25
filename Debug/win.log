@@ -1,8 +1,0 @@
-﻿  maincpp.cpp
-d:\users\good\documents\visual studio 2015\projects\win\win\maincpp.cpp(46): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\users\good\documents\visual studio 2015\projects\win\win\maincpp.cpp(52): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-maincpp.obj : error LNK2019: __imp__WinDivertOpen 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
-maincpp.obj : error LNK2019: __imp__WinDivertRecv 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
-maincpp.obj : error LNK2019: __imp__WinDivertHelperParsePacket 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
-D:\WinDivert-1.2.0-rc-MSVC\WinDivert-1.2.0-rc-MSVC\amd64\WinDivert.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'X86' 대상 컴퓨터 종류와 충돌합니다.
-d:\users\good\documents\visual studio 2015\Projects\win\Debug\win.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.
