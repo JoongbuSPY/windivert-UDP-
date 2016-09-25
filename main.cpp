@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
 	WinDivertHelperParseIPv4Address(argv[1], &origin_ip);
 	WinDivertHelperParseIPv4Address(argv[2], &change_ip);
-	//printf("º¯È¯Àü: %x\n", change_ip);
+	//printf("ë³€í™˜ì „: %x\n", change_ip);
 
 	port = atoi(argv[3]);
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
 					UINT change = ntohl(change_ip);
 
-					printf("\nº¯È¯: %x\n", change);
+					printf("\në³€í™˜: %x\n", change);
 
 					memcpy(packet + 16, &change, sizeof(UINT));
 
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 						break;
 					}
 					else
-						printf("º¸³¿\n");
+						printf("ë³´ëƒ„\n");
 				}
 			}
 		}
