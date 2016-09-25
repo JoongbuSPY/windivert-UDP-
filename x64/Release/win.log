@@ -1,0 +1,12 @@
+﻿  maincpp.cpp
+maincpp.cpp(63): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
+  maincpp.cpp(63): note: 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+maincpp.cpp(70): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
+  maincpp.cpp(70): note: 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+  코드를 생성하고 있습니다.
+  9 of 12 functions (75.0%) were compiled, the rest were copied from previous compilation.
+    7 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  win.vcxproj -> D:\Users\Good\documents\visual studio 2015\Projects\win\x64\Release\win.exe
+  win.vcxproj -> D:\Users\Good\documents\visual studio 2015\Projects\win\x64\Release\win.pdb (Full PDB)
