@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 					//for (i = 0; i < packet_len; i++)
 					//	printf("%02x ", packet[i]);
 
-					WinDivertHelperCalcChecksums(packet, packet_len, WINDIVERT_HELPER_NO_ICMP_CHECKSUM | WINDIVERT_HELPER_NO_ICMPV6_CHECKSUM | WINDIVERT_HELPER_NO_TCP_CHECKSUM);
+					ip_header->Checksum=WinDivertHelperCalcChecksums(packet, packet_len, WINDIVERT_HELPER_NO_ICMP_CHECKSUM | WINDIVERT_HELPER_NO_ICMPV6_CHECKSUM | WINDIVERT_HELPER_NO_TCP_CHECKSUM);
 					
 					if (!WinDivertSend(handle, packet, packet_len, &addr, NULL))
 					{
