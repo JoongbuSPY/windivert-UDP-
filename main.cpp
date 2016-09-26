@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 4)
 	{
-		printf("FileName SrcIP DstIp port");
+		printf("[File Name] [Soruce IP] [Destinateion Ip] [Port Number]\n");
 		return 1;
 	}
 
@@ -48,30 +48,30 @@ int main(int argc, char *argv[])
 			break;
 		}
 
-
 		WinDivertHelperParsePacket(packet, packet_len, &ip_header, NULL, NULL, NULL, NULL, &udp_header, NULL, &payload_len);
-
-
+		
 		if (ip_header != NULL)
 		{
 			if (ip_header->DstAddr == htonl(origin_ip))
 			{
 				if (udp_header->DstPort == ntohs(port))
 				{
-					for (i = 0; i < packet_len; i++)
-						printf("%02x ", packet[i]);
+					//for (i = 0; i < packet_len; i++)
+					//	printf("%02x ", packet[i]);
 
 					UINT change = ntohl(change_ip);
 
-					printf("\n변환: %x\n", change);
+					//printf("\n변환: %x\n", change);
 
 					memcpy(packet + 16, &change, sizeof(UINT));
 
-					printf("\n\n\n\n\n\n");
+					//printf("\n\n\n\n\n\n");
 
-					for (i = 0; i < packet_len; i++)
-						printf("%02x ", packet[i]);
+					//for (i = 0; i < packet_len; i++)
+					//	printf("%02x ", packet[i]);
 
+					WinDivertHelperCalcChecksums(packet, packet_len, WINDIVERT_HELPER_NO_ICMP_CHECKSUM | WINDIVERT_HELPER_NO_ICMPV6_CHECKSUM | WINDIVERT_HELPER_NO_TCP_CHECKSUM);
+					
 					if (!WinDivertSend(handle, packet, packet_len, &addr, NULL))
 					{
 						printf("WinDivertSend Error!!\n");
@@ -84,8 +84,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
+	WinDivertClose(handle);
+	return 0;
 }
-
-
-
-
